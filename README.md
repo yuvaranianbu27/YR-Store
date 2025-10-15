@@ -1,7 +1,7 @@
-# <p align="center">
-  <img src="./assets/yr-logo.png" alt="YR Logo" width="120"/>
-</p>
-YR-Store — 
+
+
+# YR-Store — Seamless Shopping, Simplified
+
 
 **YR-Store** is a modern, full-featured e-commerce platform built to deliver a smooth and intuitive shopping experience. Designed as the digital storefront for **Yuvarani’s** curated product line, it empowers users to browse, search, and purchase with ease.
 
