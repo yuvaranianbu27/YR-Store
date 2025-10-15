@@ -35,8 +35,17 @@ Contributions are what make the open-source community such an amazing place to l
 
 
 
+## 📫 Connect with me
 
-## Contact
+[![LinkedIn](https://img.shields.io/badge/LINKEDIN-blue?style=for-the-badge&logo=linkedin)](https://www.linkedin.com/in/yuvaranianbu)
+
+
+[![Email](https://img.shields.io/badge/GMAIL-yuvaranianbu27@gmail.com-red?style=for-the-badge&logo=gmail)](mailto:yuvaranianbu27@gmail.com)
+
+
+
+
 Project Link: https://github.com/yuvaranianbu27/YR-Store
 
-Yuvaranianbu - [Your Email Address] - [Your LinkedIn/Portfolio Link]
+
+Thank you for visiting my profile! Feel free to reach out for collaboration or job opportunities.
