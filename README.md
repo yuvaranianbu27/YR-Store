@@ -1,55 +1,72 @@
-# About the Project
-YR-Store is a modern, full-featured e-commerce application designed to provide a seamless shopping experience. It serves as a digital storefront for Yuvarani's products, offering users an intuitive interface for browsing, searching, and purchasing items.
+# <p align="center">
+  <img src="./assets/yr-logo.png" alt="YR Logo" width="120"/>
+</p>
+YR-Store — 
+
+**YR-Store** is a modern, full-featured e-commerce platform built to deliver a smooth and intuitive shopping experience. Designed as the digital storefront for **Yuvarani’s** curated product line, it empowers users to browse, search, and purchase with ease.
+
+---
+## 🧰 Tech Stack
+
+### 🖥️ Frontend
+- **React**: Component-based architecture for dynamic UI
+- **Tailwind CSS**: Utility-first styling for rapid design
+- **React Router**: Seamless navigation across pages
+- **Axios**: HTTP client for API communication
 
 
-## 🖼️ Tech Stack
+### ⚙️ Backend
+- **Java**: Core language for business logic
+- **Spring Boot**: RESTful API development and dependency management
+- **Spring Security + JWT**: Stateless authentication and authorization using JSON Web Tokens
+- **Hibernate/JPA**: ORM for database interaction
+- **MySQL**: Relational database support
 
-- 🧩 Frontend built with **React** and **Tailwind CSS**
-- 🔗 **Axios-powered** API calls to the backend
-- ⚙️ Backend developed using **Java + Spring Boot**
-
-
-
-
-## 🧠 Key Features
-
-- Product Catalog: Comprehensive listing of all available products with high-quality images and descriptions.
-- User Authentication: Secure sign-up and login for customers and administrators.
-- Shopping Cart: Intuitive system to add, remove, and update product quantities.
-- Checkout Process: Multi-step, secure checkout and payment integration  Stripe payment gateway.
-- Admin Dashboard: Management interface for adding/editing products, viewing orders, and managing users.
-- Search & Filtering: Powerful tools for finding products based on categories, price, and other attributes.
+### 💳 Payment Integration
+- **Stripe API**: Secure and scalable payment gateway for handling transactions
 
 
+---
 
+## 🚀 Key Features
 
-## Usage
-- As a Shopper: Simply navigate to the home page, browse categories, add items to your cart, and proceed through the checkout process.
-- As a Developer: Use the provided scripts (npm start, npm test, etc.) to run and test the application locally.
+- **🛍️ Product Catalog**: High-quality images and detailed descriptions of all available items  
+- **🔐 User Authentication**: Secure sign-up/login for both customers and admins  
+- **🛒 Shopping Cart**: Add, remove, and update product quantities with ease  
+- **💳 Checkout & Payments**: Multi-step checkout with integrated **Stripe** payment gateway  
+- **📊 Admin Dashboard**: Manage products, orders, and users through a dedicated interface  
+- **🔎 Search & Filters**: Find products by category, price, and other attributes
+- ## 💳 Stripe Integration
 
 
 
+## 🧪 Usage
+
+- **For Shoppers**:  
+  Visit the homepage, explore categories, add items to your cart, and complete your purchase through the secure checkout.
+
+- **For Developers**:  
+  Clone the repo and use the provided scripts (`npm start`, `npm test`, etc.) to run and test the app locally.
+
+---
 
 ## 🤝 Contributing
-Pull requests are welcome! For major changes, please open an issue first to discuss what you’d like to improve.
 
+Contributions are welcome!  
+If you have ideas for improvements or new features, feel free to open an issue or submit a pull request.
 
+---
 
+## 📫 Let’s Connect
 
+I'm currently open to **Java Developer** opportunities in **Dubai/Abu Dhabi**.
 
-
-## 📫 Connect with me
-Currently seeking **Java Developer roles** in **Dubai/Abu Dhabi**
-
-[![LinkedIn](https://img.shields.io/badge/LINKEDIN-blue?style=for-the-badge&logo=linkedin)](https://www.linkedin.com/in/yuvaranianbu)
-
-
+[![LinkedIn](https://img.shields.io/badge/LINKEDIN-blue?style=for-the-badge&logo=linkedin)](https://www.linkedin.com/in/yuvaranianbu)  
 [![Email](https://img.shields.io/badge/GMAIL-yuvaranianbu27@gmail.com-red?style=for-the-badge&logo=gmail)](mailto:yuvaranianbu27@gmail.com)
 
+🔗 **Project Repository**: [YR-Store on GitHub](https://github.com/yuvaranianbu27/YR-Store)
 
+---
 
+Thanks for stopping by! Feel free to reach out for collaboration, feedback, or job opportunities.
 
-Project Link: https://github.com/yuvaranianbu27/YR-Store
-
-
-Thank you for visiting my profile! Feel free to reach out for collaboration or job opportunities.
