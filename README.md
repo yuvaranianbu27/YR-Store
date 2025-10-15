@@ -35,7 +35,11 @@ Pull requests are welcome! For major changes, please open an issue first to disc
 
 
 
+
+
+
 ## 📫 Connect with me
+Currently seeking **Java Developer roles** in **Dubai/Abu Dhabi**
 
 [![LinkedIn](https://img.shields.io/badge/LINKEDIN-blue?style=for-the-badge&logo=linkedin)](https://www.linkedin.com/in/yuvaranianbu)
 
