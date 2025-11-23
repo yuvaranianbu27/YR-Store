@@ -20,7 +20,12 @@ import java.util.Set;
 @RestControllerAdvice
 @Slf4j
 public class GlobalExceptionHandler {
-
+    
+  @ExceptionHandler(ArrayIndexOutOfBoundsException.class)
+    public ResponseEntity<?> handleProductNotFoundException(ArrayIndexOutOfBoundsException exception){
+        ErrorResponse productNotFound = new ErrorResponse(LocalDateTime.now(), exception.getMessage(), "Product Not Found");
+        return new ResponseEntity<>(productNotFound, HttpStatus.NOT_FOUND);
+    }
     
     @ExceptionHandler(ResourceNotFoundException.class)
     public ResponseEntity<ErrorResponseDto> handleResourceNotFoundException(ResourceNotFoundException exception,
