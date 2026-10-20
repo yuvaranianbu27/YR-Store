@@ -12,7 +12,7 @@ YR Store brings together a product catalog, customer registration and login, sho
 - Create orders and view order-related pages.
 - View and update a customer profile.
 - Create a Stripe payment intent during checkout.
-- Submit a contact message.
+- Contact-form UI and backend endpoint.
 - Responsive React interface with customer and admin-facing pages.
 
 ## Technology
@@ -62,7 +62,7 @@ The API uses Spring Boot’s default port `8080` unless configured otherwise.
 In `yuvaranistore-ui`, create a local `.env.local` file:
 
 ```dotenv
-VITE_API_BASE_URL=http://localhost:8080
+VITE_API_BASE_URL=http://localhost:8080/api/v1
 ```
 
 Then run:
@@ -101,6 +101,7 @@ Backend, from `yuvaranistore`:
 - Use test keys while developing payment flows and configure production Stripe keys through a secret manager.
 - Configure HTTPS, secure cookie handling, and environment-specific database settings before deployment.
 - Admin-facing frontend routes are present; verify their matching authorization and backend behavior before exposing them.
+- The contact UI currently requests `/contacts`, while the backend route is `/api/v1/contact`; align these paths before relying on contact submissions.
 
 ## Links
 
