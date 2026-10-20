@@ -1,72 +1,109 @@
+# YR Store
 
+**A full-stack e-commerce application with a React storefront and a Spring Boot API.**
 
-# YR-Store — Seamless Shopping, Simplified
+YR Store brings together a product catalog, customer registration and login, shopping-cart and checkout screens, order creation, profile management, contact forms, and Stripe payment-intent integration.
 
+## Features
 
-**YR-Store** is a modern, full-featured e-commerce platform built to deliver a smooth and intuitive shopping experience. Designed as the digital storefront for **Yuvarani’s** curated product line, it empowers users to browse, search, and purchase with ease.
+- Browse the product catalog and view individual products.
+- Register and log in to a customer account.
+- Manage a cart and proceed through checkout.
+- Create orders and view order-related pages.
+- View and update a customer profile.
+- Create a Stripe payment intent during checkout.
+- Submit a contact message.
+- Responsive React interface with customer and admin-facing pages.
 
----
-## 🧰 Tech Stack
+## Technology
 
-### 🖥️ Frontend
-- **React**: Component-based architecture for dynamic UI
-- **Tailwind CSS**: Utility-first styling for rapid design
-- **React Router**: Seamless navigation across pages
-- **Axios**: HTTP client for API communication
+| Frontend | Backend |
+| --- | --- |
+| React 19, Vite 7 | Java, Spring Boot |
+| React Router | Spring Web, Spring Data JPA |
+| Tailwind CSS 4 | Spring Security, JWT, Jakarta Validation |
+| Axios, React Toastify | MySQL |
+| Stripe.js / React Stripe.js | Stripe Java SDK |
 
+## API overview
 
-### ⚙️ Backend
-- **Java**: Core language for business logic
-- **Spring Boot**: RESTful API development and dependency management
-- **Spring Security + JWT**: Stateless authentication and authorization using JSON Web Tokens
-- **Hibernate/JPA**: ORM for database interaction
-- **MySQL**: Relational database support
+The backend exposes these controller routes:
 
-### 💳 Payment Integration
-- **Stripe API**: Secure and scalable payment gateway for handling transactions
+| Method | Path | Purpose |
+| --- | --- | --- |
+| `GET` | `/api/v1/products` | List products |
+| `POST` | `/api/v1/auth/register` | Register a customer |
+| `POST` | `/api/v1/auth/login` | Authenticate a customer |
+| `POST` | `/api/v1/orders` | Create an order |
+| `POST` | `/api/v1/payment/create-payment-intent` | Create a Stripe payment intent |
+| `GET`, `PUT` | `/api/v1/profile` | Read or update the current profile |
+| `POST` | `/api/v1/contact` | Submit a contact message |
+| `GET` | `/api/v1/csrf-token` | Retrieve a CSRF token |
 
+The frontend uses `VITE_API_BASE_URL` as its API base URL and sends credentialed requests.
 
----
+## Run locally
 
-## 🚀 Key Features
+Prerequisites: Java, Node.js, npm, and a MySQL database.
 
-- **🛍️ Product Catalog**: High-quality images and detailed descriptions of all available items  
-- **🔐 User Authentication**: Secure sign-up/login for both customers and admins  
-- **🛒 Shopping Cart**: Add, remove, and update product quantities with ease  
-- **💳 Checkout & Payments**: Multi-step checkout with integrated **Stripe** payment gateway  
-- **📊 Admin Dashboard**: Manage products, orders, and users through a dedicated interface  
-- **🔎 Search & Filters**: Find products by category, price, and other attributes
-- ## 💳 Stripe Integration
+### 1. Start the backend
 
+Configure the MySQL connection and Stripe API key in the backend's local configuration. Keep credentials and Stripe keys out of source control.
 
+```powershell
+cd yuvaranistore
+.\mvnw.cmd spring-boot:run
+```
 
-## 🧪 Usage
+The API uses Spring Boot’s default port `8080` unless configured otherwise.
 
-- **For Shoppers**:  
-  Visit the homepage, explore categories, add items to your cart, and complete your purchase through the secure checkout.
+### 2. Start the frontend
 
-- **For Developers**:  
-  Clone the repo and use the provided scripts (`npm start`, `npm test`, etc.) to run and test the app locally.
+In `yuvaranistore-ui`, create a local `.env.local` file:
 
----
+```dotenv
+VITE_API_BASE_URL=http://localhost:8080
+```
 
-## 🤝 Contributing
+Then run:
 
-Contributions are welcome!  
-If you have ideas for improvements or new features, feel free to open an issue or submit a pull request.
+```powershell
+npm install
+npm run dev
+```
 
----
+Open the local URL printed by Vite. On macOS or Linux, use `./mvnw` instead of `.\mvnw.cmd`.
 
-## 📫 Let’s Connect
+## Build and test
 
-I'm currently open to **Java Developer** opportunities in **Dubai/Abu Dhabi**.
+Frontend:
 
-[![LinkedIn](https://img.shields.io/badge/LINKEDIN-blue?style=for-the-badge&logo=linkedin)](https://www.linkedin.com/in/yuvaranianbu)  
-[![Email](https://img.shields.io/badge/GMAIL-yuvaranianbu27@gmail.com-red?style=for-the-badge&logo=gmail)](mailto:yuvaranianbu27@gmail.com)
+```powershell
+cd yuvaranistore-ui
+npm run lint
+npm run build
+```
 
-🔗 **Project Repository**: [YR-Store on GitHub](https://github.com/yuvaranianbu27/YR-Store)
+Backend, from `yuvaranistore`:
 
----
+```powershell
+.\mvnw.cmd test
+```
 
-Thanks for stopping by! Feel free to reach out for collaboration, feedback, or job opportunities.
+## Repository layout
 
+- `yuvaranistore/` — Spring Boot backend.
+- `yuvaranistore-ui/` — React storefront.
+- `logo.png` — project logo.
+
+## Security and deployment notes
+
+- Use test keys while developing payment flows and configure production Stripe keys through a secret manager.
+- Configure HTTPS, secure cookie handling, and environment-specific database settings before deployment.
+- Admin-facing frontend routes are present; verify their matching authorization and backend behavior before exposing them.
+
+## Links
+
+- [GitHub repository](https://github.com/yuvaranianbu27/YR-Store)
+- [LinkedIn](https://www.linkedin.com/in/yuvaranianbu)
+- [Email](mailto:yuvaranianbu27@gmail.com)
